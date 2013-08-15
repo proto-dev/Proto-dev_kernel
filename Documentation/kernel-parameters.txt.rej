@@ -1,0 +1,19 @@
+--- Documentation/kernel-parameters.txt	2012-01-07 07:15:47.000000000 +0900
++++ Documentation/kernel-parameters.txt	2013-07-29 08:22:04.000000000 +0900
+@@ -531,6 +531,8 @@
+ 			UART at the specified I/O port or MMIO address,
+ 			switching to the matching ttyS device later.  The
+ 			options are the same as for ttyS, above.
++		hvc<n>	Use the hypervisor console device <n>. This is for
++			both Xen and PowerPC hypervisors.
+ 
+                 If the device connected to the port is not a TTY but a braille
+                 device, prepend "brl," before the device type, for instance
+@@ -679,6 +681,7 @@
+ 
+ 	earlyprintk=	[X86,SH,BLACKFIN]
+ 			earlyprintk=vga
++			earlyprintk=xen
+ 			earlyprintk=serial[,ttySn[,baudrate]]
+ 			earlyprintk=ttySn[,baudrate]
+ 			earlyprintk=dbgp[debugController#]

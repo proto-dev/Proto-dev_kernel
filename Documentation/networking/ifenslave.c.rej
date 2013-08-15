@@ -1,0 +1,17 @@
+--- Documentation/networking/ifenslave.c	2012-01-07 07:15:47.000000000 +0900
++++ Documentation/networking/ifenslave.c	2013-07-29 08:22:04.000000000 +0900
+@@ -539,12 +539,14 @@
+ 		metric = 0;
+ 	} else
+ 		metric = ifr.ifr_metric;
++	printf("The result of SIOCGIFMETRIC is %d\n", metric);
+ 
+ 	strcpy(ifr.ifr_name, ifname);
+ 	if (ioctl(skfd, SIOCGIFMTU, &ifr) < 0)
+ 		mtu = 0;
+ 	else
+ 		mtu = ifr.ifr_mtu;
++	printf("The result of SIOCGIFMTU is %d\n", mtu);
+ 
+ 	strcpy(ifr.ifr_name, ifname);
+ 	if (ioctl(skfd, SIOCGIFDSTADDR, &ifr) < 0) {
