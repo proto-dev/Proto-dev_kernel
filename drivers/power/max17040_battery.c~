@@ -573,7 +573,7 @@ static void max17040_quick_get_soc(void)
 	//logic code	
 	sleep_dbg("MAX17040_QUICK Adjusted SOC MSB [%d] : LSB [%d] : Adjusted SOC [%d] :Try Count [%d]\n",msb,lsb,avalue,i);
 	
-	if(i>=MAX_READ-1 || msb < 0 || lsb <0 ) { //Battery Bug Fixing Coded by Illustrious by Proto
+	if(i==MAX_READ) {
 		printk("Re-running to check Battery SoC!!!\n");
 		i = 0;
 		continue;			
