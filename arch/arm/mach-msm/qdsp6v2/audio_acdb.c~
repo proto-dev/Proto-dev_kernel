@@ -630,7 +630,7 @@ static int register_memory(void)
 {
 	int                     result;
 	unsigned long		paddr;
-        void                    *kvptr;
+        void                    kvptr;
 	unsigned long		kvaddr;
 	unsigned long		mem_len;
 
