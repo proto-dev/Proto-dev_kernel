@@ -374,7 +374,7 @@ static int break_ksm(struct vm_area_struct *vma, unsigned long addr)
 	return (ret & VM_FAULT_OOM) ? -ENOMEM : 0;
 }
 
-+static struct vm_area_struct *find_mergeable_vma(struct mm_struct *mm,
+static struct vm_area_struct *find_mergeable_vma(struct mm_struct *mm,
     unsigned long addr)
 {
   struct vm_area_struct *vma;
