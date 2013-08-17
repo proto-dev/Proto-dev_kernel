@@ -17,7 +17,7 @@ export CROSS_COMPILE=$HOME/android-toolchain-eabi/bin/arm-eabi-
 # make zImage
 ##############################################################################
 mkdir -p ./obj/KERNEL_OBJ/
-make O=./obj/KERNEL_OBJ/ msm8660-ubuntutouch-EF34K_defconfig
+make O=./obj/KERNEL_OBJ/ msm8660-perf-EF34K_defconfig
 make -j4 O=./obj/KERNEL_OBJ/
 
 ##############################################################################
